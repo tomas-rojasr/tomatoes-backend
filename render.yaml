@@ -1,7 +1,10 @@
-tomatoes-backend/
-  render.yaml
-  app.py
-  config.py
-  download_model.py
-  requirements.txt
-  services/
+version: "1"
+
+services:
+  - type: web
+    name: tomatoes-backend
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python download_model.py && python app.py"
+    pythonVersion: "3.10.14"
