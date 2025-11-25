@@ -1,6 +1,9 @@
 flask
-tensorflow-cpu==2.13.0
-keras
+flask-cors
 pillow
 pymongo
 python-dotenv
+tflite-runtime==2.13.0
+numpy<2
+requests
+gunicorn
